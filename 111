@@ -1,0 +1,22 @@
+class Product:
+    def __init__(self, name, description, price):
+        self.name = name
+        self.description = description
+        self.price = price
+
+class Marketplace:
+    def __init__(self):
+        self.products = []
+
+    def add_product(self, product):
+        self.products.append(product)
+        print(f"商品 '{product.name}' 已成功发布！")
+
+# 创建一个商品
+my_product = Product("二手手机", "iPhone 12，使用一年，状况良好", 3000)
+
+# 创建一个二手交易市场
+my_marketplace = Marketplace()
+
+# 在市场上发布商品
+my_marketplace.add_product(my_product)
